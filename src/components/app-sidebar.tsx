@@ -21,7 +21,7 @@ const data = {
             items: [
                 {
                     title: "All Vechicles",
-                    url: "#",
+                    url: "/",
                 },
             ],
         },
