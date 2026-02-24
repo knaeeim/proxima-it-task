@@ -38,7 +38,7 @@ export default function InventoryManager({ initialVehicles }: { initialVehicles:
     }, [initialVehicles, searchQuery, sortOrder]);
 
     return (
-        <section>
+        <section className="w-full">
             <div className="flex flex-col md:flex-row gap-4 mb-10 items-center justify-between">
                 {/* Search Bar */}
                 <Input
@@ -62,7 +62,7 @@ export default function InventoryManager({ initialVehicles }: { initialVehicles:
             </div>
 
             {/* The Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 min-h-100 min-w-250">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredAndSortedVehicles.length > 0 ? (
                     <>
                         {filteredAndSortedVehicles.map((vehicle) => (
@@ -70,7 +70,7 @@ export default function InventoryManager({ initialVehicles }: { initialVehicles:
                         ))}
                     </>
                 ) : (
-                    <div className="col-span-1 sm:col-span-2 lg:col-span-3 flex flex-col items-center justify-center py-20 text-zinc-500 border border-dashed border-zinc-800 rounded-xl bg-zinc-950/50">
+                    <div className="col-span-1 sm:col-span-2 lg:col-span-3 flex flex-col items-center justify-center py-20 text-zinc-500 border border-dashed border-zinc-800 rounded-xl bg-zinc-950/50 lg:min-w-200 lg:min-h-100">
                         <p className="text-lg font-medium text-zinc-400">No vehicles found</p>
                         <p className="text-sm">Try adjusting your search or filters.</p>
                     </div>
