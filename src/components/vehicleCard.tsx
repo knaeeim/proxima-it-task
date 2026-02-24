@@ -37,7 +37,7 @@ export function VehicleCard({ vehicle }: VehicleCardProps) {
                 </p>
                 <div className="flex justify-between items-center w-full">
                     <h3 className="text-lg font-semibold text-zinc-100 tracking-tight">
-                        {vehicle.title}
+                        {vehicle.title.split(" ").slice(0, 2).join(" ")}
                     </h3>
                     <p className="text-lg font-bold text-zinc-100">
                         ${vehicle.price.toLocaleString()}
